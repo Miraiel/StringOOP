@@ -59,11 +59,11 @@ public:
 	}
 };
 
-
 /*
 String operator+(const String& slovo)
 {
-	
+	char* strcat(char* str1, const char* str2, size_t num); // синтакис strcat
+
 }
 */
 
