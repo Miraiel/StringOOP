@@ -55,7 +55,7 @@ public:
 	{
 		size = other.size;
 		str = other.str;
-		other.size = 0;
+		other.size = 0;				//присвоение значения по умолчанию не позволяет диструктору многократно освобождать ресурсы(память)
 		other.str = nullptr;
 	}
 
@@ -86,6 +86,20 @@ public:
 		cout << "CopyAssignment:\t" << this << endl;
 		return *this;
 	}
+
+	String& operator=(String&& other) noexcept		
+	{
+		if (this != &other)
+		{
+			delete[] str;
+			size = other.size;
+			str = other.str;
+			other.size = 0;
+			other.str = nullptr;
+		}
+		return *this;
+	}
+
 	String& operator+=(const String& other)
 	{
 		return *this = *this + other;
