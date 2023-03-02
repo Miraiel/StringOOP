@@ -55,7 +55,7 @@ public:
 	{
 		size = other.size;
 		str = other.str;
-		other.size = 0;				//присвоение значения по умолчанию не позволяет диструктору многократно освобождать ресурсы(память)
+		other.size = 80;				//присвоение значения по умолчанию не позволяет диструктору многократно освобождать ресурсы(память)
 		other.str = nullptr;
 	}
 
@@ -94,7 +94,7 @@ public:
 			delete[] str;
 			size = other.size;
 			str = other.str;
-			other.size = 0;
+			other.size = 80;
 			other.str = nullptr;
 		}
 		return *this;
