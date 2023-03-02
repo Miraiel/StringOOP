@@ -165,10 +165,4 @@ void main()
 	str1 += str2;
 	cout << str1 << endl;
 #endif // HOME_WORK
-
-	//MoveMethods:
-	//"The rule of three": CopyConstructor, CopyAssignment, ~Destructor
-	//"The rule of zero"
-	//C++ 11
-	//"The rule of five":  MoveConstructor, MoveAssignment
 }
